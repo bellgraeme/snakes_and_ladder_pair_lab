@@ -4,7 +4,7 @@ class Player
 
   def initialize(name)
     @name = name
-    @position = 0
+    @position = 1
     @game_winner = false
   end
 
@@ -23,12 +23,16 @@ class Player
     @position = snake.end_position
   end
 
+  def change_to_winner
+    @game_winner = true
+  end
+
   def game_won?
     return @game_winner
   end
 
-  def make_player_winner
-    @game_winner = true
-  end
+  
+
+  
 
 end

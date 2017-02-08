@@ -7,11 +7,11 @@ require_relative('./snake.rb')
 
 class Board
 
-  attr_reader :board_layout
+  attr_reader :board_layout, :players
 
-  def initialize  
+  def initialize(*player)  
     @board_layout = []
-    100.times{@board_layout.push(nil)} 
+    101.times{@board_layout.push(nil)} 
     snake1 = Snake.new(17,13)
     snake2 = Snake.new(52,29)
     snake3 = Snake.new(57,40)
@@ -43,6 +43,25 @@ class Board
     @board_layout[75] = ladder5
     @board_layout[80] = ladder6
     @board_layout[90] = ladder7
+
+    @players = []
+    @players.push(*player)
+
+  end
+
+  def player_turn(dice, player)
+
+    player.dice_moves_player(dice)
+    square = @board_layout[player.check_position]
+    if square.class == Snake
+      player.snake_move(square)
+    elsif square.class == Ladder
+      player.ladder_move(square)
+    end
+
+    if player.check_position >= 99
+      player.change_to_winner
+    end
   end
 
 

@@ -4,6 +4,7 @@ require_relative('../player.rb')
 require_relative('../dice.rb')
 require_relative('../ladder.rb')
 require_relative('../snake.rb')
+require_relative('../board.rb')
 
 
 class TestPlayer < Minitest::Test
@@ -20,7 +21,7 @@ class TestPlayer < Minitest::Test
   end
 
   def test_check_position
-    assert_equal(0, @player.check_position)
+    assert_equal(1, @player.check_position)
   end
 
   def test_dice_moves_player
@@ -33,7 +34,7 @@ class TestPlayer < Minitest::Test
   def  test_ladder_move
     @player.ladder_move(@ladder)
     assert_equal(@player.check_position, @ladder.end_position )
-   end
+  end
 
   def test_snake_move
     @player.snake_move(@snake)
@@ -42,11 +43,6 @@ class TestPlayer < Minitest::Test
 
   def test_false__game_won?
     assert_equal(false, @player.game_won?)
-  end
-
-  def test_make_player_winner
-    @player.make_player_winner
-    assert_equal(true, @player.game_won?)
   end
 
 end
