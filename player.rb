@@ -4,6 +4,11 @@ class Player
 
   def initialize(name)
     @name = name
+    @position = 0
+  end
+
+  def check_position
+    return @position
   end
 
 end

@@ -12,4 +12,8 @@ class TestPlayer < Minitest::Test
     assert_equal("Big Steve", @player.name)
   end
 
+  def test_check_position
+    assert_equal(0, @player.check_position)
+  end
+
 end
