@@ -20,13 +20,29 @@ class Board
     snake6 = Snake.new(95,51)
     snake7 = Snake.new(97,79)
 
-    @board_layout[16] = snake1
-    @board_layout[51] = snake2
-    @board_layout[56] = snake3
-    @board_layout[61] = snake4
-    @board_layout[87] = snake5
-    @board_layout[94] = snake6
-    @board_layout[96] = snake7
+    @board_layout[17] = snake1
+    @board_layout[52] = snake2
+    @board_layout[57] = snake3
+    @board_layout[62] = snake4
+    @board_layout[88] = snake5
+    @board_layout[95] = snake6
+    @board_layout[97] = snake7
+
+    ladder1 = Ladder.new(3, 21)
+    ladder2 = Ladder.new(8, 30)
+    ladder3 = Ladder.new(28, 84)
+    ladder4 = Ladder.new(58, 77)
+    ladder5 = Ladder.new(75, 86)
+    ladder6 = Ladder.new(80, 100)
+    ladder7 = Ladder.new(90, 91)
+
+    @board_layout[3] = ladder1
+    @board_layout[8] = ladder2
+    @board_layout[28] = ladder3
+    @board_layout[58] = ladder4
+    @board_layout[75] = ladder5
+    @board_layout[80] = ladder6
+    @board_layout[90] = ladder7
   end
 
 
