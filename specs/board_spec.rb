@@ -28,7 +28,16 @@ class TestBoard < Minitest::Test
     assert_equal(7, snake_count)
   end
 
-  
+  def test_board_layout_has_ladders
+    board_layout = @board.board_layout
+    ladder_count = 0
+    for index in board_layout
+      if index.class == Ladder
+        ladder_count += 1
+      end
+    end
+    assert_equal(7, ladder_count)
+  end
 
 
 
