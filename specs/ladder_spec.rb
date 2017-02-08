@@ -13,4 +13,12 @@ class TestLadder < Minitest::Test
     assert_equal("ladder1", @ladder.name)
   end
 
+  def test_has_start_position
+    assert_equal(5, @ladder.start_position)
+  end
+
+  def test_has_end_position
+    assert_equal(16, @ladder.end_position)
+  end
+
 end
