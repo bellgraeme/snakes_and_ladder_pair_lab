@@ -6,4 +6,8 @@ class Dice
     @dice_number = 1
   end
 
+  def roll
+    @dice_number = rand(1..6)
+  end
+
 end
