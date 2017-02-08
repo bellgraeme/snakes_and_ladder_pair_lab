@@ -11,8 +11,8 @@ class TestPlayer < Minitest::Test
   def setup
     @player = Player.new("Big Steve")
     @dice = Dice.new
-    @ladder = Ladder.new("ladder1", 2, 18)
-    @snake = Snake.new("snake1", 45, 39)
+    @ladder = Ladder.new(2, 18)
+    @snake = Snake.new(45, 39)
   end
 
   def test_has_name

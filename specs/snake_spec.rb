@@ -5,11 +5,7 @@ require_relative('../snake.rb')
 class TestSnake < Minitest::Test
 
   def setup
-    @snake = Snake.new("snake1", 25, 3)
-  end
-
-  def test_has_name
-    assert_equal("snake1", @snake.name)
+    @snake = Snake.new(25, 3)
   end
 
   def test_start_position

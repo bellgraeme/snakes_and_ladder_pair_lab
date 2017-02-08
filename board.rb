@@ -5,8 +5,10 @@ class Board
   def initialize  
     @board_layout = []
 
-    100.times {@board_layout.push(nil)}
-
+    while @board_layout.size < 100
+    Snake.new(, )
+    @board_layout.push(nil)
+    end 
   end
 
 

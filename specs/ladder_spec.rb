@@ -6,11 +6,7 @@ require_relative('../ladder.rb')
 class TestLadder < Minitest::Test
 
   def setup
-    @ladder = Ladder.new("ladder1", 5, 16)
-  end
-
-  def test_has_name
-    assert_equal("ladder1", @ladder.name)
+    @ladder = Ladder.new(5, 16)
   end
 
   def test_has_start_position
