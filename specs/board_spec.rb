@@ -10,6 +10,7 @@ class TestBoard < Minitest::Test
 
   def setup
     @board = Board.new
+
   end
 
   def test_board_layout_has_100_spaces
@@ -17,9 +18,11 @@ class TestBoard < Minitest::Test
     assert_equal(100, board_layout.size)
   end
 
-  # def test_board_layout_has_snakes
-  #   board_layout = @board.board_layout
-  #   assert_equal(5, board_layout.count(Snake))
-  # end
+
+
+  def test_board_layout_has_snakes
+    board_layout = @board.board_layout
+    assert_equal(93, board_layout.count(nil))
+  end
 
 end
