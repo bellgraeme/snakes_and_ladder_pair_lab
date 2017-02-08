@@ -10,5 +10,7 @@ class Player
   def check_position
     return @position
   end
-
+  def dice_moves_player(dice)
+    @position += dice.roll
+  end
 end
